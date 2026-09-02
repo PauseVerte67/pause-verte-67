@@ -1,61 +1,118 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pause Verte 67</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pause Verte 67</title>
 
-  <style>
-    body {
-      margin: 0;
-      background: #0d120d;
-      color: white;
-      font-family: Arial, sans-serif;
-      text-align: center;
-    }
+<style>
+* {
+  box-sizing: border-box;
+}
 
-    .header {
-      padding: 45px 20px 25px;
-    }
+body {
+  margin: 0;
+  background: #071009;
+  color: white;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+}
 
-    h1 {
-      color: #9ac43c;
-      font-size: 30px;
-      margin-bottom: 8px;
-    }
+.hero {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  background: #071009;
+}
 
-    .subtitle {
-      color: #aaa;
-    }
+.hero video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-    .menu {
-      margin: 30px 20px;
-      padding: 25px;
-      background: #182018;
-      border-radius: 20px;
-      font-size: 24px;
-      font-weight: bold;
-      border: 1px solid #344534;
-    }
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.10),
+    rgba(7,16,9,0.75)
+  );
+}
 
-    .age {
-      margin-top: 40px;
-      color: #777;
-      font-size: 13px;
-    }
-  </style>
+.title {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  bottom: 25px;
+  text-align: center;
+  padding: 0 15px;
+}
+
+.title h1 {
+  margin: 0;
+  color: #9ac43c;
+  font-size: 34px;
+  font-weight: 900;
+}
+
+.title p {
+  margin: 8px 0 0;
+  color: #ddd;
+  font-size: 17px;
+}
+
+.content {
+  padding: 20px;
+  max-width: 700px;
+  margin: auto;
+}
+
+.menu {
+  background: #111d14;
+  border: 1px solid #344b39;
+  border-radius: 22px;
+  padding: 25px 20px;
+  text-align: center;
+  font-size: 27px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(0,0,0,.25);
+}
+
+.menu:active {
+  transform: scale(.98);
+}
+
+.age {
+  text-align: center;
+  color: #888;
+  margin-top: 35px;
+  font-size: 15px;
+}
+</style>
 </head>
 
 <body>
 
-  <div class="header">
+<div class="hero">
+
+  <video autoplay muted loop playsinline>
+    <source src="VID_20260827_042506_395.mp4" type="video/mp4">
+  </video>
+
+  <div class="title">
     <h1>🌿 PAUSE VERTE 67</h1>
-    <div class="subtitle">La pause qu'il vous faut.</div>
+    <p>La pause qu'il vous faut.</p>
   </div>
-<video width="100%" controls playsinline>
-  <source src="VID_20260827_042506_395.mp4" type="video/mp4">
-</video>
-  
+
+</div>
+
+<div class="content">
 
   <div class="menu" onclick="window.location.href='resines.html'">
     🟫 Résines
@@ -64,6 +121,8 @@
   <div class="age">
     🔞 Réservé aux +18 ans
   </div>
+
+</div>
 
 </body>
 </html>
